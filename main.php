@@ -10,7 +10,7 @@
     include 'navBar.php';
 ?>
 <h1>Merge PDFs</h1>
-<img src = "mergelitrepo\images\fire_1f525.png" alt = "Epic fire emoji">
+<img src = "images\fire_1f525.png" alt = "Epic fire emoji">
 <div class="placeholder">Here is where we'll put the file drag and drop zone and the submit button</div>
 
 </body>

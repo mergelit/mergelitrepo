@@ -9,8 +9,15 @@
 <?php
     include 'navBar.php';
 ?>
-<h1>Merge Page</h1>
-<div class="placeholder">Here is where we'll put the file drag and drop zone and the submit button</div>
+<h1>Merge PDFs</h1>
+
+<div class="placeholder">
+    <div id="Fire emoji">
+        <img src = "images\fire_1f525.png" alt = "Epic fire emoji">
+    </div>
+    Here is where we'll put the file drag and drop zone and the submit button
+</div>
+
 </body>
 </html>
 

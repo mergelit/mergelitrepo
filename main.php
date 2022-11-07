@@ -16,7 +16,6 @@
         <img src = "images\fire_1f525.png" alt = "Epic fire emoji">
     </div>
     Here is where we'll put the file drag and drop zone and the submit button
-    <div style="rcorners1"> This is a fucking rectangle </div>
 </div>
 
 </body>

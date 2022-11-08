@@ -4,6 +4,12 @@
     <meta charset="utf-8"/>
     <title>MergeLit Main Page</title>
     <link rel="stylesheet" href="theStyles.css"/>
+    <script>
+        function openExplorer() {
+		    var thePath = 'C:\\Windows';
+		    window.open('file://' + thePath, 'explorer');
+	    }
+    </script>
 </head>
 <body>
 <?php
@@ -15,8 +21,9 @@
     <div id="Fire emoji">
         <img src = "images\fire_1f525.png" alt = "Epic fire emoji">
     </div>
-    <div id="rcorners">Put a rectangle around this</div>
+    <button type = "button">Select Files</button>
 </div>
+
 
 </body>
 </html>

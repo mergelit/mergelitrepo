@@ -3,12 +3,7 @@ body{
     color: white;
     text-align: center;
 }
-.placeholder{
-    margin: auto;
-    width: 60%;
-    border: 3px solid white;
-    padding: 15%;
-}
+
 #navBar{
     padding: 15px;
     text-align: center;
@@ -25,11 +20,6 @@ body{
     width: 60%;
 }
 
-//rectangle with rounded corners
-#rcorners1 {
-  border-radius: 25px;
-  background: #808080
-  padding: 20px;
-  width: 200px;
-  height: 150px;
+#rcorners{
+    border: 1px solid green;
 }

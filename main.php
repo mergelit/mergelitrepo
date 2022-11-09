@@ -16,7 +16,7 @@
             border-style: dotted;
             border-radius: 10px;
             position: relative;
-            height: 400px;
+            height: 60vh;
             width: 70%;
             left: 50%;
             transform: translate(-50%);
@@ -24,12 +24,12 @@
 
         #fireEmoji{
             position: relative;
-            top: 15%;
+            top: 25%;
         }
 
         #selectFilesButton{
             position: relative;
-            top: 15%;
+            top: 25%;
         }
 
         #mergeButton{

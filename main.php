@@ -15,11 +15,10 @@
         .selectFilesArea{
             border-style: dotted;
             border-radius: 10px;
-            height: 450px;
-            width: 1000px;
             position: relative;
+            height: 400px;
+            width: 70%;
             left: 50%;
-            top: 0px;
             transform: translate(-50%);
         }
 

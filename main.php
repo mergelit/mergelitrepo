@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <title>MergeLit Main Page</title>
     <link rel="stylesheet" href="theStyles.css"/>
-    <script>
+    <script> //can't get this working now 
         function openExplorer() {
 		    var thePath = 'C:\\Windows';
 		    window.open('file://' + thePath, 'explorer');

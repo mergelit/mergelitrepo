@@ -15,12 +15,11 @@
         .selectFilesArea{
             border-style: dotted;
             border-radius: 10px;
-            background: #000000;
-            height: 500px;
+            height: 450px;
             width: 1000px;
             position: relative;
             left: 50%;
-            top: 25px;
+            top: 0px;
             transform: translate(-50%);
         }
 
@@ -34,10 +33,12 @@
             top: 15%;
         }
 
-        .mergeButton{
+        #mergeButton{
+            border-color: red;
             position: relative;
-            top: 50px;
+            top: 20px;
         }
+
 
     </style>
 </head>
@@ -56,10 +57,7 @@
     </button>
 </div>
 
-<div class = "mergeButton">
-    <button type = "button">MERGE</button>
-</div>
-
+<button id = "mergeButton" style = >MERGE</button>
 
 </body>
 </html>

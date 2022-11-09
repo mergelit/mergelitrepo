@@ -3,24 +3,32 @@ body{
     color: white;
     text-align: center;
 }
+h1{}
+
 .placeholder{
     margin: auto;
     width: 60%;
-    border: 3px solid white;
     padding: 15%;
 }
 #navBar{
     padding: 15px;
     text-align: center;
+
+
 }
 #icon{
     width: 20%;
     float: left;
+}
+#iconImage{
+    max-width: 100px;
 }
 #SignIn{
     width: 20%;
     float: right;
 }
 #banner{
+
     width: 60%;
 }
+

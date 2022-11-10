@@ -1,33 +1,63 @@
 <style>
     nav{
-        padding: 50px;
+        padding: 20px;
         border-style: none none solid none;
         border-color: white;
         border-width: 10px;
     }
     #banner{
-        display: inline;
+        font-size: 30px;
+        position: relative;
+        text-align: center;
     }
     #iconImage{
         display: inline;
         width: 100px;
         height: auto;
     }
+
     #mainPageLink{
         float: left;
     }
-    #accountPageLink{
+    #accountDetailsLink{
+        float: right;
+        
+    }
+    #loginPageLink{
+        float: right;
+        
+    }
+    #membershipsPageLink{
         float: right;
     }
 
 </style>
 
 <nav>
-    <a id="mainPageLink" href="main.php">
-        <img id="iconImage" src="images/MergeLitIcon.jpg" alt="MergeLit Icon and Main Page Link">
-    </a>
-        <h1 id="banner">MergeLit</h1>
-    <a id="accountPageLink" href="accountDetails.php">
-        Login/Account Link
-    </a>
+    <table width="100%">
+        <tr>
+            <td>
+                <a id="mainPageLink" href="main.php">
+                    <img id="iconImage" src="images/MergeLitIcon.jpg" alt="MergeLit Icon and Main Page Link">
+                </a>
+            </td>
+            <td>
+                <span id="banner">MergeLit</span>
+            </td>
+            <td>
+                <a id="accountDetailsLink" href="accountDetails.php">
+                    Account Details
+                </a>
+                <br>
+
+                <a id="loginPageLink" href="login.php">
+                    Login/Signup
+                </a>
+                <br>
+                <a id="membershipsPageLink" href="memberships.php">
+                    Memberships
+                </a>
+            </td>
+        </tr>
+    </table>
 </nav>

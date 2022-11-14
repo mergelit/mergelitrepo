@@ -15,7 +15,7 @@
             margin: 0;
             height: 100%;
             width: 100%;
-            background-color: gray;
+            background-color: #0e0e0e;
         }
         ul {
             list-style-type: "🔥";

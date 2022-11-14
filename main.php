@@ -13,16 +13,34 @@
 
     <style>
         html, body {
+            margin: 0;
+            height: 100%;
+            width: 100%;
             background-color: #0e0e0e;
+        }
+
+        .bawlsinyojaws {
+            margin: auto;
+            border-radius: 25px;
+            width: 80%;
+            height: 70%;
+            postion: relative;
+            background: firebrick;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-style: solid;
+            border-width: 15px;
+            border-color: papayawhip;
         }
         .selectFilesArea{
             border-style: dotted;
-            border-radius: 10px;
-            position: relative;
-            height: 60vh;
-            width: 70%;
-            left: 50%;
-            transform: translate(-50%);
+            border-color: papayawhip;
+            border-radius: 25px;
+            position: center;
+            height: 60%;
+            width: 60%;
+            
         }
 
         #fireEmoji{
@@ -41,7 +59,6 @@
             top: 20px;
         }
 
-
     </style>
 </head>
 <body>
@@ -49,14 +66,16 @@
     include 'navBar.php';
 ?>
 <h1>Merge PDFs</h1>
+<div class = "bawlsinyojaws">
 
-<div class = "selectFilesArea">
-    <div id="fireEmoji">
-        <img src = "images\fire_1f525.png" alt = "Epic fire emoji">
+    <div class = "selectFilesArea">
+        <div id="fireEmoji">
+            <img src = "images\fire_1f525.png" alt = "Epic fire emoji">
+        </div>
+        <button id = "selectFilesButton">
+            Select Files
+        </button>
     </div>
-    <button id = "selectFilesButton">
-        Select Files
-    </button>
 </div>
 
 <button id = "mergeButton" style = >MERGE</button>

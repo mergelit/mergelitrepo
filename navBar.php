@@ -38,7 +38,7 @@
         <tr>
             <td>
                 <a id="mainPageLink" href="main.php">
-                    <img id="iconImage" src="images/MergeLitIcon.jpg" alt="MergeLit Icon and Main Page Link">
+                    <img id="iconImage" src="images/fire_1f525.png" alt="MergeLit Icon and Main Page Link">
                 </a>
             </td>
             <td>

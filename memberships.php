@@ -15,6 +15,7 @@
             margin: 0;
             height: 100%;
             width: 100%;
+            background-color: black;
         }
         ul {
             list-style-type: "🔥";
@@ -74,6 +75,9 @@ include 'navBar.php';
             <li>
                 <p>Merging speeds will be less throttled. </p>
             </li>
+            <li>
+                <p>Highest merging speeds we offer.
+            </li>
         </ul>
     </div>
     <div class="rect">
@@ -82,6 +86,9 @@ include 'navBar.php';
             <li>
                 <p>Low chance your personal information won't get stolen. </p>
             </li>
+            <li>
+                <p>Middle speed merging.
+            </li>
         </ul>
     </div>
     <div class="rect">
@@ -89,6 +96,9 @@ include 'navBar.php';
         <ul>
             <li>
                 <p>Your information is ours, you have been warned. </p>
+            </li>
+            <li>
+                <p>Slow merging speeds.
             </li>
         </ul>
     </div>

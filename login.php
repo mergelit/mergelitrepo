@@ -7,9 +7,13 @@
 </head>
 <body>
 <?php
-
+    include 'navBar.php';
 ?>
-<h1>Merge Page</h1>
-<div class="placeholder">Here is where we'll put the file drag and drop zone and the submit button</div>
+<h1>Log In Here:</h1>
+<div class="input">
+    <input value="SSN"></input>
+    <input value="Password"></input>
+</div>
+<button>Log In</button>
 </body>
 </html>

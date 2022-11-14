@@ -12,6 +12,9 @@
     </script>
 
     <style>
+        html, body {
+            background-color: gray;
+        }
         .selectFilesArea{
             border-style: dotted;
             border-radius: 10px;

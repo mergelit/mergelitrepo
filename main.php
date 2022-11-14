@@ -13,7 +13,7 @@
 
     <style>
         html, body {
-            background-color: gray;
+            background-color: #0e0e0e;
         }
         .selectFilesArea{
             border-style: dotted;

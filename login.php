@@ -4,6 +4,11 @@
     <meta charset="utf-8"/>
     <title>Log Into MergeLit</title>
     <link rel="stylesheet" href="theStyles.css"/>
+    <style>
+        html, body {
+            background-color: #0e0e0e;
+        }
+    </style>
 </head>
 <body>
 <?php

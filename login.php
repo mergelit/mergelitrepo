@@ -6,7 +6,21 @@
     <link rel="stylesheet" href="theStyles.css"/>
     <style>
         html, body {
+            margin: 0;
+            height: 100%;
+            width: 100%;
             background-color: #0e0e0e;
+        }
+        .container {
+            margin: auto;
+            border-radius: 25px;
+            width: 25%;
+            height: 30%;
+            postion: relative;
+            background: cyan;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
@@ -15,10 +29,13 @@
     include 'navBar.php';
 ?>
 <h1>Log In Here:</h1>
-<div class="input">
-    <input value="SSN"></input>
-    <input value="Password"></input>
+<div class="container">
+    <div class="input">
+        <input value="SSN"></input><br><br>
+        <input value="Password"></input><br><br>
+        <button>Log In</button>
+    </div>
 </div>
-<button>Log In</button>
+
 </body>
 </html>

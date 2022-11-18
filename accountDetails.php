@@ -6,10 +6,17 @@
     <link rel="stylesheet" href="theStyles.css"/>
 
     <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #0e0e0e;
+        }
+
         .accountDetailList {
             border-radius: 10px;
             height: 290px;
-            width: 400px;
+            width: 30%;
             background: #FFFFFF;
             color: #000000;
             position: absolute;
@@ -28,28 +35,28 @@ include 'navBar.php';
 <p>Here is where we'll put the account details once we get the database working
     <div class = "accountDetailList">
         <p>Account Name: <br>
-            <svg width="350" height="15">
-                <rect width="350" height="15" style="fill:rgb(80,80,80);" left: 25px/>
+            <svg width=90% height="15">
+                <rect width=100% height="15" style="fill:rgb(80,80,80);" left: 25px/>
             </svg>
         </p>
         <p>Email: <br>
-            <svg width="350" height="15">
-                <rect width="350" height="15" style="fill:rgb(80,80,80);" />
+            <svg width=90% height="15">
+                <rect width=100% height="15" style="fill:rgb(80,80,80);" />
             </svg>    
         </p>
         <p>Password: <br>
-            <svg width="350" height="15">
-                <rect width="350" height="15" style="fill:rgb(80,80,80);" />
+            <svg width=90% height="15">
+                <rect width=100% height="15" style="fill:rgb(80,80,80);" />
             </svg>
         </p>
         <p>Social Security Number: <br>
-            <svg width="350" height="15">
-                <rect width="350" height="15" style="fill:rgb(80,80,80);" />
+            <svg width=90% height="15">
+                <rect width=100% height="15" style="fill:rgb(80,80,80);" />
             </svg>
         </p>
         <p>Account Identifier: <br>
-            <svg width="350" height="15">
-                <rect width="350" height="15" style="fill:rgb(80,80,80);" />
+            <svg width=90% height="15">
+                <rect width=100% height="15" style="fill:rgb(80,80,80);" />
             </svg>
         </p>
     </div>

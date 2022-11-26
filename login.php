@@ -31,8 +31,8 @@
 <h1>Log In Here:</h1>
 <div class="container">
     <div class="input">
-        <input value="SSN"></input><br><br>
-        <input value="Password"></input><br><br>
+        <input placeholder="SSN"></input><br><br>
+        <input placeholder="Password"></input><br><br>
         <button>Log In</button>
     </div>
 </div>

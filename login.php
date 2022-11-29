@@ -26,28 +26,8 @@
 </head>
 <body>
 <?php
+    include 'dbConnection.php';
     include 'navBar.php';
-
-    /*
-    //Need to create a database still
-    //If the connection is opened here does it stay open while on the website or close if you switch pages?
-
-    //Opening DB connection, variables to be replaced
-    $servername = "localhost";
-    $username = "username";
-    $password = "password";
-
-    try{
-        //Create connection
-        $conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);
-        //Set the PDO error mode to exception
-        $conn->setAttribute(PDO::ATTR_ERROMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Connected successfully";
-    } catch(PDOException $e) {
-        echo "Connection failed: ".$e->getMessage();
-    }
-    */
-
 ?>
 <h1>Log In Here:</h1>
 <div class="container">

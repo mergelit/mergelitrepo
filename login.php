@@ -27,6 +27,24 @@
 <body>
 <?php
     include 'navBar.php';
+
+    //Need to create a database still
+    //If the connection is opened here does it stay open while on the website or close if you switch pages?
+    /*
+    //Opening DB connection, variables to be replaced
+    $servername = "localhost";
+    $username = "username";
+    $password = "password";
+
+    //Create connection
+    $conn = new mysqli($servername, $username, $password);
+
+    //Check connection
+    if($conn->connect_error){
+        die("Connection failed: ".$conn->connect_error);
+    }
+    echo "Connected successfully";
+    */
 ?>
 <h1>Log In Here:</h1>
 <div class="container">

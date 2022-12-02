@@ -1,3 +1,6 @@
+<?php
+    include 'dbConnection.php';
+?>
 <style>
     nav{
         padding: 20px;

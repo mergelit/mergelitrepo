@@ -3,7 +3,10 @@
 <body>
 <?php
 /*
+
+$type = 'mysql';
 $servername = "localhost";
+$port = 3306; //default port for laragon, might need to clarify
 $username = "username";
 $password = "password";
 

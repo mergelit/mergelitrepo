@@ -57,8 +57,16 @@
                     Login/Signup
                 </a>
                 <br>
+                <a id="loginPageLink" href="login.php">
+                    Log Out
+                </a>
+                <br>
                 <a id="membershipsPageLink" href="memberships.php">
                     Memberships
+                </a>
+                <br>
+                <a id="adminPageLink" href="memberships.php">
+                    Admin Page
                 </a>
             </td>
         </tr>

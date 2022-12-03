@@ -24,6 +24,7 @@ try {
     $statement = $conn->query(
             "CREATE TABLE IF NOT EXISTS accounts (
                         ssnum int primary key,
+                        admin bool not null,
                         fname varchar(25) not null,
                         lname varchar(25) not null,
                         password varchar(25) not null,

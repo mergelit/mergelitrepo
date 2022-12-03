@@ -48,7 +48,7 @@
             top: 25%;
         }
 
-        #selectFilesButton{
+        #uploadFiles{
             position: relative;
             top: 25%;
         }
@@ -72,9 +72,15 @@ include 'navBar.php';
         <div id="fireEmoji">
             <img src = "images\fire_1f525.png" alt = "Epic fire emoji">
         </div>
-        <button id = "selectFilesButton">
-            Select Files
-        </button>
+
+        <form action="upload.php" method="post" enctype="multipart/form-data" id = "uploadFiles">
+            Select two PDFs to upload:
+            <br>
+            <input type="file" name="firstFile" id="file-1">
+            <br>
+            <input type="file" name="secondFile" id="file-2">
+        </form>
+
     </div>
 </div>
 

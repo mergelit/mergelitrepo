@@ -78,7 +78,7 @@ include 'navBar.php';
     </div>
 </div>
 
-<button id = "mergeButton" style = >MERGE</button>
+<button id="mergeButton" onclick="location.href='download.php'" style= >MERGE</button>
 
 </body>
 </html>

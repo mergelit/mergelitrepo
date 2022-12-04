@@ -47,6 +47,7 @@
     $email=$member['email'];
     $password=$member['password'];
     $admin=$member['admin'];
+    $plan=$member['subtype'];
 ?>
 <h1>Account Details</h1>
     <div class = "accountDetailList">
@@ -65,6 +66,11 @@
             </svg>
         </p>
         <p>Social Security Number: <?= $ssn ?><br>
+            <svg width=90% height="15">
+                <rect width=100% height="15" style="fill:rgb(80,80,80);" />
+            </svg>
+        </p>
+        <p>Membership Plan: <?= $plan ?><br>
             <svg width=90% height="15">
                 <rect width=100% height="15" style="fill:rgb(80,80,80);" />
             </svg>

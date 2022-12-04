@@ -37,11 +37,11 @@
         $user_email = $_POST['email'];
         $user_password = $_POST['password'];
 
-        $statement=$conn->query("select email, password, ssnum, admin from accounts where email='$user_email';");
+        $statement=$conn->query("select email, password, ssnum, admin, subtype from accounts where email='$user_email';");
         $member=$statement->fetch();
 
         if($user_email == $member[0] and $user_password == $member[1]){
-            login($member[2],$member[3]);
+            login($member[2],$member[3], $member[4]);
             header('Location: accountDetails.php');
             exit;
         }

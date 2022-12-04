@@ -75,9 +75,32 @@
 </head>
 <body>
 <?php
-include 'navBar.php';
+    include 'navBar.php';
+
+    if(isset($_POST['notlit'])){
+
+        $ssn = $_SESSION['ssn'];
+        $statement=$conn->query("update ourdatabase.accounts set subtype=1 where ssnum='$ssn'");
+        $statement->execute();
+        $_SESSION['subtype']=1;
+    }
+    if(isset($_POST['sortalit'])){
+
+        $ssn = $_SESSION['ssn'];
+        $statement=$conn->query("UPDATE ourdatabase.accounts SET subtype=2 WHERE ssnum='$ssn'");
+        $statement->execute();
+        $_SESSION['subtype']=2;
+    }
+    if(isset($_POST['megalit'])){
+
+        $ssn = $_SESSION['ssn'];
+        $statement=$conn->query("update ourdatabase.accounts set subtype=3 where ssnum='$ssn'");
+        $statement->execute();
+        $_SESSION['subtype']=3;
+    }
 ?>
 <h1>Memberships</h1>
+
 <div class="container">
     <div class="rect">
         <h2> MegaLit Package <br>US$49.99/mo </h2>
@@ -92,7 +115,13 @@ include 'navBar.php';
                 <p>Highest merging speeds we offer.
             </li>
         </ul>
-        <button onclick = "megaAlert()"> Select Plan </button>
+        <form method="post" action="memberships.php">
+            <?= $logged_in ? ( $_SESSION['subtype']== 3 ? 'Current Plan' :
+                '
+        <button onclick = "megaAlert()" type="submit" name="megalit"> Select Plan </button>
+        ' ): 'Log In to select a plan'
+            ?>
+        </form>
     </div>
     <div class="rect">
         <h2> SortaLit Package <br>US$19.99/mo</h2>
@@ -104,7 +133,13 @@ include 'navBar.php';
                 <p>Middle speed merging.
             </li>
         </ul>
-        <button onclick = "sortaAlert()"> Select Plan </button>
+        <form method="post" action="memberships.php">
+            <?= $logged_in ? ( $_SESSION['subtype']== 2 ? 'Current Plan' :
+                '
+        <button onclick = "sortaAlert()" type="submit" name="sortalit"> Select Plan </button>
+        ' ): 'Log In to select a plan'
+            ?>
+        </form>
     </div>
     <div class="rect">
         <h2> NotLitAtAll Package <br>FREE</h2>
@@ -116,7 +151,13 @@ include 'navBar.php';
                 <p>Slow merging speeds.
             </li>
         </ul>
-        <button onclick = "notlitAlert()"> Select Plan </button>
+        <form method="post" action="memberships.php">
+        <?= $logged_in ? ( $_SESSION['subtype']== 1 ? 'Current Plan' :
+        '
+        <button onclick = "notlitAlert()" type="submit" name="notlit"> Select Plan </button>
+        ' ): 'Log In to select a plan'
+        ?>
+        </form>
     </div>
 </div>
 </body>

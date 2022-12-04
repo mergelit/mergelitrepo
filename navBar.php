@@ -34,6 +34,9 @@
     #membershipsPageLink{
         float: right;
     }
+    #adminPageLink{
+        float: right;
+    }
 
 </style>
 

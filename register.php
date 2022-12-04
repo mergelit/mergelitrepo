@@ -27,13 +27,27 @@
 <body>
 <?php
     include 'navBar.php';
+    if($logged_in){
+        header('Location: accountDetails.php');
+        exit;
+    }
 
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $ssn = $_POST['ssn'];
+        $fname=$_POST['fname'];
+        $lname=$_POST['lname'];
+        $user_email = $_POST['email'];
+        $user_password = $_POST['password'];
+
+        $statement=$conn->query("INSERT INTO accounts values('$ssn', false, '$fname', '$lname', '$user_password', '$user_email', 1)");
+        $member=$statement->execute();
+}
 
 ?>
 <h1>Sign Up Here:</h1>
 <div class="container">
     <div class="input">
-        <form method="post" action="login.php">
+        <form method="post" action="register.php">
             <input placeholder="SSN" type="text" name="ssn"><br><br>
             <input placeholder="First Name" name="fname" type="text"><br><br>
             <input placeholder="Last Name" name="lname" type="text"><br><br>

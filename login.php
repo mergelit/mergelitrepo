@@ -26,23 +26,36 @@
 </head>
 <body>
 <?php
-    include 'dbConnection.php';
     include 'navBar.php';
+
+    if($logged_in){
+        header('Location: accountDetails.php');
+        exit;
+    }
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $user_email = $_POST['email'];
+        $user_password = $_POST['password'];
+
+        $statement=$conn->query("select email, password, ssnum from accounts where email='$user_email';");
+        $member=$statement->fetch();
+
+        if($user_email == $member[0] and $user_password == $member[1]){
+            login($member[2]);
+            header('Location: accountDetails.php');
+            exit;
+        }
+    }
 ?>
 <h1>Log In Here:</h1>
 <div class="container">
     <div class="input">
-        <input placeholder="SSN"></input><br><br>
-        <input placeholder="Password"></input><br><br>
-        <button>Log In</button>
-    </div>
-</div>
-<h1>Sign In Here:</h1>
-<div class="container">
-    <div class="input">
-        <input placeholder="SSN"></input><br><br>
-        <input placeholder="Password"></input><br><br>
-        <button>Log In</button>
+        <form method="POST" action="login.php">
+        <input placeholder="Email" type="email" name="email"><br><br>
+        <input placeholder="Password" type="password" name="password"><br><br>
+        <input type="submit" value="Log In">
+        </form>
+        <a href="register.php" id="registerPageLink">Register Here</a>
     </div>
 </div>
 

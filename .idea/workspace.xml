@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="551405a4-e3f8-4628-bf11-2a18f1d4306b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sessions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dbConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/dbConnection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
@@ -37,23 +41,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tylerslaptop/Documents/GitHub/mergelitrepo&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/laragon/www/mergelitrepo",
+    "list.type.of.created.stylesheet": "CSS",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mongo&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo",
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\mergelitrepo" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\mergelitrepo" />
       <recent name="C:\laragon\www\mergelitrepo\images" />
@@ -72,7 +79,7 @@
       <workItem from="1667876788941" duration="5126000" />
       <workItem from="1669786654599" duration="919000" />
       <workItem from="1669961046178" duration="6483000" />
-      <workItem from="1670096825761" duration="1790000" />
+      <workItem from="1670096825761" duration="10234000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,6 @@
 <?php
     include 'dbConnection.php';
+    include 'sessions.php';
 ?>
 <style>
     nav{
@@ -57,7 +58,7 @@
                     Login/Signup
                 </a>
                 <br>
-                <a id="loginPageLink" href="login.php">
+                <a id="loginPageLink" href="logout.php">
                     Log Out
                 </a>
                 <br>

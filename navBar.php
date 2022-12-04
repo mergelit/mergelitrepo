@@ -34,9 +34,6 @@
     #membershipsPageLink{
         float: right;
     }
-    #adminPageLink{
-        float: right;
-    }
 
 </style>
 
@@ -52,25 +49,24 @@
                 <span id="banner">MergeLit</span>
             </td>
             <td>
+                <?= $logged_in ? '
                 <a id="accountDetailsLink" href="accountDetails.php">
                     Account Details
-                </a>
-                <br>
-
-                <a id="loginPageLink" href="login.php">
-                    Login/Signup
                 </a>
                 <br>
                 <a id="loginPageLink" href="logout.php">
                     Log Out
                 </a>
+                ' : '
+                <br>
+
+                <a id="loginPageLink" href="login.php">
+                    Login/Signup
+                </a>
+                '?>
                 <br>
                 <a id="membershipsPageLink" href="memberships.php">
                     Memberships
-                </a>
-                <br>
-                <a id="adminPageLink" href="memberships.php">
-                    Admin Page
                 </a>
             </td>
         </tr>

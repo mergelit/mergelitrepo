@@ -46,6 +46,7 @@
     $lname=$member['lname'];
     $email=$member['email'];
     $password=$member['password'];
+    $admin=$member['admin'];
 ?>
 <h1>Account Details</h1>
     <div class = "accountDetailList">
@@ -67,6 +68,11 @@
             <svg width=90% height="15">
                 <rect width=100% height="15" style="fill:rgb(80,80,80);" />
             </svg>
+        </p>
+        <p>
+        <a id="adminPageLink" href="admin.php">
+            Admin Page
+        </a>
         </p>
     </div>
 </body>

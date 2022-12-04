@@ -4,12 +4,6 @@
     <meta charset="utf-8"/>
     <title>MergeLit Main Page</title>
     <link rel="stylesheet" href="theStyles.css"/>
-    <script> //can't get this working now
-        function openExplorer() {
-            var thePath = 'C:\\Windows';
-            window.open('file://' + thePath, 'explorer');
-        }
-    </script>
 
     <style>
         html, body {
@@ -19,7 +13,7 @@
             background-color: #0e0e0e;
         }
 
-        .bawlsinyojaws {
+        .selectFilesElements {
             margin: auto;
             border-radius: 25px;
             width: 80%;
@@ -66,7 +60,7 @@
 include 'navBar.php';
 ?>
 <h1>Merge PDFs</h1>
-<div class = "bawlsinyojaws">
+<div class = "selectFilesElements">
 
     <div class = "selectFilesArea">
         <div id="fireEmoji">

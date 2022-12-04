@@ -60,9 +60,9 @@
     include 'navBar.php';
 ?>
 <h1>Merge PDFs</h1>
-<div class = "selectFilesArea">
+<div class = "selectFilesElements">
 
-    <div class = "selectFilesElements">
+    <div class = "selectFilesArea">
         <div id="fireEmoji">
             <img src = "images\fire_1f525.png" alt = "Epic fire emoji">
         </div>

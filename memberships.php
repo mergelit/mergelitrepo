@@ -10,6 +10,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="theStyles.css"/>
+    <script>
+        function megaAlert() {
+            alert ("MegaLit Plan Selected!");
+        }
+
+        function sortaAlert() {
+            alert ("SortaLit Plan Selected!");
+        }
+
+        function notlitAlert() {
+            alert ("NotLitAtAll Plan Selected >:(");
+        }
+    </script>
     <style>
         html, body {
             margin: 0;
@@ -79,6 +92,7 @@ include 'navBar.php';
                 <p>Highest merging speeds we offer.
             </li>
         </ul>
+        <button onclick = "megaAlert()"> Select Plan </button>
     </div>
     <div class="rect">
         <h2> SortaLit Package <br>US$19.99/mo</h2>
@@ -90,6 +104,7 @@ include 'navBar.php';
                 <p>Middle speed merging.
             </li>
         </ul>
+        <button onclick = "sortaAlert()"> Select Plan </button>
     </div>
     <div class="rect">
         <h2> NotLitAtAll Package <br>FREE</h2>
@@ -101,6 +116,7 @@ include 'navBar.php';
                 <p>Slow merging speeds.
             </li>
         </ul>
+        <button onclick = "notlitAlert()"> Select Plan </button>
     </div>
 </div>
 </body>

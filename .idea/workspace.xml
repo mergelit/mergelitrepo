@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="551405a4-e3f8-4628-bf11-2a18f1d4306b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accountDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/accountDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navBar.php" beforeDir="false" afterPath="$PROJECT_DIR$/navBar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/dbConnection.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

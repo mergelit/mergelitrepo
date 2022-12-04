@@ -70,9 +70,11 @@
             </svg>
         </p>
         <p>
+            <?= $admin ? '
         <a id="adminPageLink" href="admin.php">
             Admin Page
         </a>
+        ':'' ?>
         </p>
     </div>
 </body>

@@ -1,5 +1,6 @@
 <?php
     include 'dbConnection.php';
+    include 'sessions.php';
 ?>
 <style>
     nav{
@@ -48,14 +49,21 @@
                 <span id="banner">MergeLit</span>
             </td>
             <td>
+                <?= $logged_in ? '
                 <a id="accountDetailsLink" href="accountDetails.php">
                     Account Details
                 </a>
+                <br>
+                <a id="loginPageLink" href="logout.php">
+                    Log Out
+                </a>
+                ' : '
                 <br>
 
                 <a id="loginPageLink" href="login.php">
                     Login/Signup
                 </a>
+                '?>
                 <br>
                 <a id="membershipsPageLink" href="memberships.php">
                     Memberships

@@ -27,35 +27,35 @@
 <body>
 <?php
     include 'navBar.php';
-
     if($logged_in){
         header('Location: accountDetails.php');
         exit;
     }
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $ssn = $_POST['ssn'];
+        $fname=$_POST['fname'];
+        $lname=$_POST['lname'];
         $user_email = $_POST['email'];
         $user_password = $_POST['password'];
 
-        $statement=$conn->query("select email, password, ssnum, admin from accounts where email='$user_email';");
-        $member=$statement->fetch();
+        $statement=$conn->query("INSERT INTO accounts values('$ssn', false, '$fname', '$lname', '$user_password', '$user_email', 1)");
+        $member=$statement->execute();
+}
 
-        if($user_email == $member[0] and $user_password == $member[1]){
-            login($member[2],$member[3]);
-            header('Location: accountDetails.php');
-            exit;
-        }
-    }
 ?>
-<h1>Log In Here:</h1>
+<h1>Sign Up Here:</h1>
 <div class="container">
     <div class="input">
-        <form method="POST" action="login.php">
-        <input placeholder="Email" type="email" name="email"><br><br>
-        <input placeholder="Password" type="password" name="password"><br><br>
-        <input type="submit" value="Log In">
+        <form method="post" action="register.php">
+            <input placeholder="SSN" type="text" name="ssn"><br><br>
+            <input placeholder="First Name" name="fname" type="text"><br><br>
+            <input placeholder="Last Name" name="lname" type="text"><br><br>
+            <input placeholder="Email" type="email" name="email"><br><br>
+            <input placeholder="Password" type="password" name="password"><br><br>
+            <input type="submit" value="Register">
         </form>
-        <a href="register.php" id="registerPageLink">Register Here</a>
+        <a href="login.php" id="registerPageLink">Log In Here</a>
     </div>
 </div>
 

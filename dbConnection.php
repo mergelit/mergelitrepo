@@ -23,17 +23,28 @@ try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $statement = $conn->query(
             "CREATE TABLE IF NOT EXISTS accounts (
-                        ssnum int primary key,
+                        ssnum varchar(9) primary key,
+                        admin bool not null,
                         fname varchar(25) not null,
                         lname varchar(25) not null,
                         password varchar(25) not null,
-                        email varchar(25) not null,
+                        email varchar(50) not null,
                         subtype int check (subtype >= 1 and subtype <= 3))"
     );
     $statement->execute();
     echo "Connected successfully";
 } catch(PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
+}
+try{
+    $statement = $conn->query("INSERT INTO accounts values ('000000000', true, 'admin', 'admin','admin', 'admin@admin.com', 1)");
+} catch(PDOException $e){
+    echo " add log errors";
+}
+try{
+    $statement = $conn->query("INSERT INTO accounts values ('000000001', false, 'user', 'user','user', 'user@user.com', 1)");
+} catch(PDOException $e){
+    echo " add log errors";
 }
 ?>
 </body>

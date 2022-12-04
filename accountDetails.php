@@ -29,35 +29,52 @@
 </head>
 <body>
 <?php
-include 'navBar.php';
+    include 'navBar.php';
+    $name = "name name";
+    $email = "email";
+    $password = "password";
+    $ssn = "social security number";
+    if(!$logged_in){
+        header('Location: login.php');
+        exit;
+    }
+    $ssn=$_SESSION['ssn'];
+    $statement = $conn->query("select * from accounts where ssnum='$ssn'");
+    $member = $statement->fetch();
+
+    $fname=$member['fname'];
+    $lname=$member['lname'];
+    $email=$member['email'];
+    $password=$member['password'];
+    $admin=$member['admin'];
 ?>
 <h1>Account Details</h1>
-<p>Here is where we'll put the account details once we get the database working
     <div class = "accountDetailList">
-        <p>Account Name: <br>
+        <p>Account Name: <?= $fname ?> <?= $lname ?><br>
             <svg width=90% height="15">
                 <rect width=100% height="15" style="fill:rgb(80,80,80);" left: 25px/>
             </svg>
-        </p>
-        <p>Email: <br>
+        <p>Email:<?= $email ?><br>
             <svg width=90% height="15">
                 <rect width=100% height="15" style="fill:rgb(80,80,80);" />
             </svg>    
         </p>
-        <p>Password: <br>
+        <p>Password: <?= $password ?><br>
             <svg width=90% height="15">
                 <rect width=100% height="15" style="fill:rgb(80,80,80);" />
             </svg>
         </p>
-        <p>Social Security Number: <br>
+        <p>Social Security Number: <?= $ssn ?><br>
             <svg width=90% height="15">
                 <rect width=100% height="15" style="fill:rgb(80,80,80);" />
             </svg>
         </p>
-        <p>Account Identifier: <br>
-            <svg width=90% height="15">
-                <rect width=100% height="15" style="fill:rgb(80,80,80);" />
-            </svg>
+        <p>
+            <?= $admin ? '
+        <a id="adminPageLink" href="admin.php">
+            Admin Page
+        </a>
+        ':'' ?>
         </p>
     </div>
 </body>

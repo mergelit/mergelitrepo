@@ -72,5 +72,15 @@ if(!$_SESSION['admin']){
 ?>
 <h1>Admin Page</h1>
 <p> All the cool Admin Features</p>
+
+<h2>Error Log</h2>
+<?php
+$logs = fopen(ini_get('error_log'), "r") or die("Unable to open logs!");
+
+while(!feof($logs)){
+    echo fgets($logs)."<br>";
+}
+fclose($logs);
+?>
 </body>
 </html>

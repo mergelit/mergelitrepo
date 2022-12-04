@@ -39,12 +39,12 @@ try {
 try{
     $statement = $conn->query("INSERT INTO accounts values ('000000000', true, 'admin', 'admin','admin', 'admin@admin.com', 1)");
 } catch(PDOException $e){
-    echo " add log errors";
+
 }
 try{
     $statement = $conn->query("INSERT INTO accounts values ('000000001', false, 'user', 'user','user', 'user@user.com', 1)");
 } catch(PDOException $e){
-    echo " add log errors";
+
 }
 ?>
 </body>

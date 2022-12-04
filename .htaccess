@@ -1,0 +1,3 @@
+php_flag dispay_errors Off
+php_flag log_errors On
+php_value error_reporting E_ALL

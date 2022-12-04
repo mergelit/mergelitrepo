@@ -74,9 +74,6 @@ include 'navBar.php';
             <br>
             <input type="file" name="file-input1" id="file-2">
             <br>
-            <button onclick="document.getElementById('file-input').click();">Open</button>
-            <input id="file-input" type="file" name="name" style="display: none;" />
-
         </form>
 
     </div>
@@ -84,10 +81,12 @@ include 'navBar.php';
     <br>
     <script>
         function test() {
-            alert("asdf")
+            const file1 = document.getElementById('file-1').value;
+            const file2 = document.getElementById('file-2').value;
+            console.log(pdfsToMerge);
         }
     </script>
-    <button id="mergeButton" onclick=test() style= >MERGE</button>
+    <button id="mergeButton" style= >MERGE</button>
 </div>
 
 
@@ -95,32 +94,27 @@ include 'navBar.php';
 
 <script type="module" src='https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.js'>
 
-    import { PDFDocument, PDFPage } from "pdf-lib";
+    document.getElementById("mergeButton").onclick=async ()=>{
 
-    export async function mergePdfs(pdfsToMerge: ArrayBuffer[]): Promise<ArrayBufferLike> {
-        const mergedPdf: PDFDocument = await PDFDocument.create();
+    const file1 = document.getElementById('file-1').value;
+    const file2 = document.getElementById('file-2').value;
 
-        const createInnerPromise = async (arrayBuffer: ArrayBuffer): Promise<PDFPage[]> => {
-            const pdf: PDFDocument = await PDFDocument.load(arrayBuffer);
-            return await mergedPdf.copyPages(pdf, pdf.getPageIndices());
-        };
+    const mergedPdf = await PDFDocument.create();
 
-        const outerPromise: Promise<PDFPage[]>[] = pdfsToMerge.map((arrayBuffer) => {
-            const innerPromise: Promise<PDFPage[]> = createInnerPromise(arrayBuffer);
-            return innerPromise;
-        });
+    const pdfA = await PDFDocument.load(fs.readFileSync(file1));
+    const pdfB = await PDFDocument.load(fs.readFileSync(file2));
 
-        const resultOuterPromise: PDFPage[][] = await Promise.all(outerPromise);
+    const copiedPagesA = await mergedPdf.copyPages(pdfA, pdfA.getPageIndices());
+    copiedPagesA.forEach((page) => mergedPdf.addPage(page));
 
-        resultOuterPromise.forEach((pageArray: PDFPage[]) => {
-            pageArray.forEach((page: PDFPage) => {
-                mergedPdf.addPage(page);
-            });
-        });
+    const copiedPagesB = await mergedPdf.copyPages(pdfB, pdfB.getPageIndices());
+    copiedPagesB.forEach((page) => mergedPdf.addPage(page));
 
-        return (await mergedPdf.save()).buffer;
-    }
+    const mergedPdfFile = await mergedPdf.save();
 
+    console.log(mergedPdfFile);
+
+    };
 </script>
 </body>
 </html>

@@ -6,11 +6,12 @@ $logged_in = $_SESSION['logged_in'] ?: false;
 $email = 'ivy@eg.link';
 $password = 'password';
 
-function login($ssn, $admin){
+function login($ssn, $admin, $subtype){
     session_regenerate_id(true);
     $_SESSION['logged_in'] = true;
     $_SESSION['ssn'] = $ssn;
     $_SESSION['admin'] = $admin;
+    $_SESSION['subtype'] = $subtype;
 }
 
 function logout(){

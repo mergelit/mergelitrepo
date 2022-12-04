@@ -70,16 +70,58 @@ include 'navBar.php';
         <form action="upload.php" method="post" enctype="multipart/form-data" id = "uploadFiles">
             Select two PDFs to upload:
             <br>
-            <input type="file" name="firstFile" id="file-1">
+            <input type="file" name="file-input1" id="file-1">
             <br>
-            <input type="file" name="secondFile" id="file-2">
+            <input type="file" name="file-input1" id="file-2">
+            <br>
+            <button onclick="document.getElementById('file-input').click();">Open</button>
+            <input id="file-input" type="file" name="name" style="display: none;" />
+
         </form>
 
     </div>
+
+    <br>
+    <script>
+        function test() {
+            alert("asdf")
+        }
+    </script>
+    <button id="mergeButton" onclick=test() style= >MERGE</button>
 </div>
 
-<button id="mergeButton" onclick="location.href='download.php'" style= >MERGE</button>
 
+
+
+<script type="module" src='https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.js'>
+
+    import { PDFDocument, PDFPage } from "pdf-lib";
+
+    export async function mergePdfs(pdfsToMerge: ArrayBuffer[]): Promise<ArrayBufferLike> {
+        const mergedPdf: PDFDocument = await PDFDocument.create();
+
+        const createInnerPromise = async (arrayBuffer: ArrayBuffer): Promise<PDFPage[]> => {
+            const pdf: PDFDocument = await PDFDocument.load(arrayBuffer);
+            return await mergedPdf.copyPages(pdf, pdf.getPageIndices());
+        };
+
+        const outerPromise: Promise<PDFPage[]>[] = pdfsToMerge.map((arrayBuffer) => {
+            const innerPromise: Promise<PDFPage[]> = createInnerPromise(arrayBuffer);
+            return innerPromise;
+        });
+
+        const resultOuterPromise: PDFPage[][] = await Promise.all(outerPromise);
+
+        resultOuterPromise.forEach((pageArray: PDFPage[]) => {
+            pageArray.forEach((page: PDFPage) => {
+                mergedPdf.addPage(page);
+            });
+        });
+
+        return (await mergedPdf.save()).buffer;
+    }
+
+</script>
 </body>
 </html>
 

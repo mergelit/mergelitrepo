@@ -64,6 +64,11 @@
 <body>
 <?php
 include 'navBar.php';
+
+if(!$_SESSION['admin']){
+    header('Location: main.php');
+    exit;
+}
 ?>
 <h1>Admin Page</h1>
 <p> All the cool Admin Features</p>

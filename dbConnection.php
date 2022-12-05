@@ -32,9 +32,8 @@ try {
                         subtype int check (subtype >= 1 and subtype <= 3))"
     );
     $statement->execute();
-    echo "Connected successfully";
 } catch(PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
+
 }
 try{
     $statement = $conn->query("INSERT INTO accounts values ('000000000', true, 'admin', 'admin','admin', 'admin@admin.com', 1)");

@@ -4,7 +4,6 @@
     <meta charset="utf-8"/>
     <title>MergeLit Main Page</title>
     <link rel="stylesheet" href="theStyles.css"/>
-
     <style>
         html, body {
             margin: 0;
@@ -34,7 +33,7 @@
             position: center;
             height: 60%;
             width: 60%;
-            
+
         }
 
         #fireEmoji{
@@ -42,22 +41,24 @@
             top: 25%;
         }
 
-        #selectFilesButton{
+        #uploadFiles{
             position: relative;
             top: 25%;
         }
 
-        #mergeButton{
+        #merge{
             border-color: red;
             position: relative;
             top: 20px;
         }
 
     </style>
+
+    <script data-main="../scripts/main" src="scripts/lib/require.js"></script>
 </head>
 <body>
 <?php
-    include 'navBar.php';
+include 'navBar.php';
 ?>
 <h1>Merge PDFs</h1>
 <div class = "selectFilesElements">
@@ -66,13 +67,36 @@
         <div id="fireEmoji">
             <img src = "images\fire_1f525.png" alt = "Epic fire emoji">
         </div>
-        <button id = "selectFilesButton">
-            Select Files
-        </button>
+
+        <form action="upload.php" method="post" enctype="multipart/form-data" id = "uploadFiles">
+            Select two PDFs to upload:
+            <br>
+            <input type="file" name="file-input1" id="file-1">
+            <br>
+            <input type="file" name="file-input1" id="file-2">
+            <br>
+        </form>
     </div>
+
+    <br>
+    <button type=button id="merge">MERGE</button>
+    <script type="module">
+        import { merge } from './scripts/helper/merge.js'
+
+
+        document.querySelector('#merge').addEventListener('click', merge);
+    </script>
+
+
+
+    <!--
+
+     <button type=button id="test">test</button>
+    <script type="module" src="./app.js"></script>
+    <button type="button" id="hello">Click Me</button>
+    <script type="module" src="./app.js"></script> -->
 </div>
 
-<button id = "mergeButton" style = >MERGE</button>
 
 </body>
 </html>
